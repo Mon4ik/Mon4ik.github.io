@@ -1,0 +1,31 @@
+@import "colors";
+@import "values";
+
+body {
+  color: $stone-050;
+  background: $stone-900;
+  margin: 0;
+
+  font-family: "Nunito", sans-serif;
+}
+
+main {
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Belanosima", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin: 0;
+}
+
+p { margin: 0}
