@@ -3,9 +3,9 @@
 
 <template>
   <div class="flex flex-col justify-center">
-    <h1 class="text-[25vw] select-none">idkncc</h1>
+    <h1 class="text-[25vw] disable-select">idkncc</h1>
     <div class="flex justify-between">
-      <p class="bio-text select-none">just a fullstack, roblox developer</p>
+      <p class="bio-text disable-select">just a fullstack, roblox developer</p>
 
       <div class="flex justify-end items-center gap-2">
         <NuxtLink href="https://github.com/Mon4ik">
@@ -28,7 +28,10 @@
 </template>
 <style scoped lang="scss">
 .bio-text {
-  font-size: clamp(1em, 3.5vw, 2em);
+  @apply text-sm sm:text-lg md:text-xl xl:text-2xl;
 }
 
+.disable-select {
+  @apply select-none cursor-default;
+}
 </style>
