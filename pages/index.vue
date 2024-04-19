@@ -3,11 +3,11 @@
 
 <template>
   <div class="flex flex-col justify-center">
-    <h1 class="text-[25vw]">idkncc</h1>
+    <h1 class="text-[25vw] select-none">idkncc</h1>
     <div class="flex justify-between">
-      <p class="md:text-xl">just a fullstack, roblox developer</p>
+      <p class="bio-text select-none">just a fullstack, roblox developer</p>
 
-      <div class="flex justify-end gap-2">
+      <div class="flex justify-end items-center gap-2">
         <NuxtLink href="https://github.com/Mon4ik">
           <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                viewBox="0 0 16 16">
@@ -26,3 +26,9 @@
     </div>
   </div>
 </template>
+<style scoped lang="scss">
+.bio-text {
+  font-size: clamp(1em, 3.5vw, 2em);
+}
+
+</style>
