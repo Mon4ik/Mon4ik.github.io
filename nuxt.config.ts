@@ -1,13 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    devtools: {enabled: true},
+
     modules: [
         ['@nuxtjs/google-fonts', {
             families: {
-                Belanosima: [400, 600],
-                Nunito: "400..700"
+                "Playfair Display": {
+                    wght: '400..900',
+                    ital: '400..700',
+                }
             },
             outputDir: 'assets'
         }]
     ],
-    devtools: {enabled: true},
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
 })

@@ -1,12 +1,11 @@
-@import "colors";
-@import "values";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  color: $stone-050;
-  background: $stone-900;
-  margin: 0;
+  @apply bg-[#7CFF00] text-[#FF0056] m-0;
 
-  font-family: "Nunito", sans-serif;
+  font-family: "Playfair Display", sans-serif;
 }
 
 main {
@@ -20,12 +19,17 @@ main {
 }
 
 h1 {
-  font-family: "Belanosima", sans-serif;
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
+}
+
+p {
+  @apply m-0;
+
+  font-family: "Playfair Display", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin: 0;
 }
-
-p { margin: 0}
