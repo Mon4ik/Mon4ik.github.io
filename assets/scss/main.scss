@@ -2,16 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-[#7CFF00] text-[#FF0056] m-0;
-
-  font-family: "Playfair Display", sans-serif;
+@font-face {
+  font-family: 'NPV 20 db';
+  font-display: swap;
+  src: url('../fonts/20db.otf') format('opentype');
 }
 
-main {
+body {
+  @apply bg-[#fbeadb] text-[#474747] m-0;
+
+  font-family: "NPV 20 db", sans-serif;
+}
+
+section.page-full {
   width: 100vw;
-  height: 100dvh;
+  min-height: 100dvh;
   overflow: hidden;
+
+  padding: 4vw;
 
   display: flex;
   justify-content: center;
@@ -19,14 +27,13 @@ main {
 }
 
 h1 {
-  font-family: "Playfair Display", sans-serif;
-  font-style: italic;
+  font-family: "NPV 20 db", sans-serif;
 }
 
 p {
   @apply m-0;
 
-  font-family: "Playfair Display", sans-serif;
+  font-family: "NPV 20 db", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {

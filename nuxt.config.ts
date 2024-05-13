@@ -4,12 +4,6 @@ export default defineNuxtConfig({
 
     modules: [
         ['@nuxtjs/google-fonts', {
-            families: {
-                "Playfair Display": {
-                    wght: '400..900',
-                    ital: '400..700',
-                }
-            },
             outputDir: 'assets'
         }]
     ],
