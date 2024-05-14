@@ -2,21 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'NPV 20 db';
-  font-display: swap;
-  src: url('../fonts/20db.otf') format('opentype');
-}
+@import "fonts";
 
 body {
-  @apply bg-[#fbeadb] text-[#474747] m-0;
+  @apply bg-concrete-100 text-black m-0;
 
-  font-family: "NPV 20 db", sans-serif;
+  font-family: "ArchitecturalMed", sans-serif;
 }
 
 section.page-full {
   width: 100vw;
-  min-height: 100dvh;
+  height: 100dvh;
   overflow: hidden;
 
   padding: 4vw;
@@ -24,19 +20,37 @@ section.page-full {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &.sizes-2page {
+    height: 200dvh;
+  }
 }
 
-h1 {
-  font-family: "NPV 20 db", sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "ArchitecturalMedExp", sans-serif;
 }
 
 p {
   @apply m-0;
-
-  font-family: "NPV 20 db", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin: 0;
+}
+
+.btn {
+  @apply bg-concrete-300 px-6 py-2 transition-all;
+  @apply text-4xl;
+
+  font-family: "Architectural", sans-serif;
+
+  &:hover {
+    @apply bg-opacity-50;
+    font-family: "ArchitecturalMed", sans-serif;
+  }
+
+  &:active {
+    @apply bg-concrete-400;
+  }
 }

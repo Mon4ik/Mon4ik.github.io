@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import PortfolioCard from "~/components/PortfolioCard.vue";
 </script>
 
 <template>
   <section class="page-full">
-    <div class="flex flex-col justify-center bg-red-500 p-12">
+    <div class="flex flex-col justify-center p-12">
       <h1 class="text-[15vw] disable-select">idkncc</h1>
-      <div class="flex justify-between items-center">
-        <p class="bio-text disable-select ml-4">web fullstack, roblox game developer</p>
+      <div class="flex justify-between items-center mx-2">
+        <p class="bio-text disable-select">web fullstack, roblox game developer</p>
 
         <div class="flex justify-end items-center gap-2">
           <NuxtLink href="https://github.com/Mon4ik">
@@ -27,46 +28,56 @@
       </div>
     </div>
   </section>
-  <section class="page-full flex-col gap-10">
+
+  <section class="page-full sizes-2page flex-col gap-10">
     <h1 class="text-[8vw] md:text-[3vw] text-left w-full">portfolio</h1>
-    <div class="flex-grow w-full h-full p-10 grid sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <div class="bg-red-500 p-8 flex flex-col gap-5">
-        <img src="~/assets/screenshots/dbnk.su.png" alt="" class="aspect-square">
-        <div class="flex-grow">
-          <h2 class="text-[2vw]">Energocalc</h2>
-          <NuxtLink href="https://app.dbnk.su/">
-            <button class="bg-yellow-500 px-3 py-1 text-[#fcefe4]">visit</button>
-          </NuxtLink>
-        </div>
-      </div>
-      <div class="bg-red-500 p-8 flex flex-col gap-5">
-        <img src="https://placehold.co/512?text=WIP" alt="">
-        <div class="flex-grow">
-          <h2 class="text-[2vw]">Boncraft</h2>
-          <span class="bg-yellow-600 px-3 py-1 text-[#fcefe4]">wip</span>
-        </div>
-      </div>
-      <div class="bg-red-500 p-8 flex flex-col gap-5">
-        <img src="~/assets/screenshots/rng.png" alt="">
-        <div class="flex-grow">
-          <h2 class="text-[2vw]">Номера RNG</h2>
-          <span class="bg-yellow-600 px-3 py-1 text-[#fcefe4]">wip</span>
-        </div>
+    <div class="flex-grow w-full h-full p-10 bg-concrete-50">
+      <div class="w-full h-fit grid sm:grid-cols-2 md:grid-cols-3 gap-5 overflow-hidden">
+
+        <PortfolioCard
+            image="/screenshots/dbnk.su.png"
+            url="https://app.dbnk.su/"
+            title="energo-calc"
+        />
+
+        <PortfolioCard
+            image="https://placehold.co/512?text=WIP"
+            url="https://bonmade.ru"
+            title="boncraft"
+        />
+
+        <PortfolioCard
+            image="/screenshots/rng.png"
+            url="https://www.roblox.com/"
+            title="Номера RNG"
+        />
+
+        <PortfolioCard
+            image="https://placehold.co/512?text=WIP"
+            url="https://www.roblox.com/"
+            title="MM: Classic"
+        />
       </div>
 
-      <div class="bg-red-500 p-8 flex flex-col gap-5">
-        <img src="https://placehold.co/512?text=WIP" alt="">
-        <div class="flex-grow">
-          <h2 class="text-[1.5vw] mb-2">Murder Mystery: Classic</h2>
-          <span class="bg-yellow-600 px-3 py-1 text-[#fcefe4]">wip</span>
-        </div>
+    </div>
+  </section>
+
+  <section class="page-full flex-col gap-10">
+    <h1 class="text-[8vw] md:text-[3vw] text-left w-full">libraries</h1>
+    <div class="flex-grow w-full h-full p-10 bg-concrete-50">
+      <div class="w-full h-full flex flex-col gap-5 overflow-scroll">
+        <LibraryCard
+          title="better-react-components"
+          description="Better react components for roblox ui"
+          url="https://github.com/Mon4ik/better-react-components"
+        />
       </div>
     </div>
   </section>
 </template>
 <style scoped lang="scss">
 .bio-text {
-  @apply text-[2vw] md:text-xl xl:text-xl;
+  @apply text-[5vw];
 }
 
 .disable-select {
