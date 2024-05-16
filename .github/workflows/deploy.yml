@@ -25,6 +25,7 @@ jobs:
 
       - run: pnpm install
       - run: pnpm nuxt build --preset github_pages
+      - run: pnpm add-curl-support
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
