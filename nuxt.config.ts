@@ -4,7 +4,12 @@ export default defineNuxtConfig({
 
     modules: [
         ['@nuxtjs/google-fonts', {
-            outputDir: 'assets'
+            families: {
+                "Prompt": {
+                    wght: [200, 300, 400, 500, 600, 700, 800],
+                    ital: [200, 300, 400, 500, 600, 700, 800]
+                }
+            }
         }]
     ],
     postcss: {

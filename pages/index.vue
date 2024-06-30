@@ -1,84 +1,95 @@
 <script setup lang="ts">
-import PortfolioCard from "~/components/PortfolioCard.vue";
+import {ref} from "vue";
+
+const projects = ref([
+  {
+    name: "yandex-homekit",
+    description: "Adds Yandex Home to Homekit",
+    link: "https://github.com/Mon4ik/yandex-homekit",
+  },
+  {
+    name: "pubtrust-chat",
+    description: "Chat based of Signatures and works on MQTT",
+    link: "https://github.com/Mon4ik/pubtrust-chat",
+  },
+])
 </script>
 
 <template>
-  <section class="page-full">
-    <div class="flex flex-col justify-center p-12">
-      <h1 class="text-[15vw] disable-select">idkncc</h1>
-      <div class="flex justify-between items-center mx-2">
-        <p class="bio-text disable-select">web fullstack, roblox game developer</p>
+  <main class="main-content">
+    <section class="main-section area-title">
+      <h1 class="text-red title-idkncc">idkncc</h1>
+      <p>fullstack, software developer</p>
+    </section>
 
-        <div class="flex justify-end items-center gap-2">
-          <NuxtLink href="https://github.com/Mon4ik">
-            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                 viewBox="0 0 16 16">
-              <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-            </svg>
-          </NuxtLink>
-          <NuxtLink href="https://t.me/idknccbio">
-            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                 viewBox="0 0 16 16">
-              <path
-                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-            </svg>
-          </NuxtLink>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="main-section area-langs">
+      <img src="~/assets/logos/rust.svg" width="96" height="96">
+      <img src="~/assets/logos/typescript.svg" width="96" height="96">
+    </section>
 
-  <section class="page-full sizes-2page flex-col gap-10">
-    <h1 class="text-[8vw] md:text-[3vw] text-left w-full">portfolio</h1>
-    <div class="flex-grow w-full h-full p-10 bg-concrete-50">
-      <div class="w-full h-fit grid sm:grid-cols-2 md:grid-cols-3 gap-5 overflow-hidden">
-
-        <PortfolioCard
-            image="/screenshots/dbnk.su.png"
-            url="https://app.dbnk.su/"
-            title="energo-calc"
-        />
-
-        <PortfolioCard
-            image="https://placehold.co/512?text=WIP"
-            url="https://bonmade.ru"
-            title="boncraft"
-        />
-
-        <PortfolioCard
-            image="/screenshots/rng.png"
-            url="https://www.roblox.com/"
-            title="Номера RNG"
-        />
-
-        <PortfolioCard
-            image="https://placehold.co/512?text=WIP"
-            url="https://www.roblox.com/"
-            title="MM: Classic"
-        />
-      </div>
-
-    </div>
-  </section>
-
-  <section class="page-full flex-col gap-10">
-    <h1 class="text-[8vw] md:text-[3vw] text-left w-full">libraries</h1>
-    <div class="flex-grow w-full h-full p-10 bg-concrete-50">
-      <div class="w-full h-full flex flex-col gap-5 overflow-scroll">
-        <LibraryCard
-          title="better-react-components"
-          description="Better react components for roblox ui"
-          url="https://github.com/Mon4ik/better-react-components"
-        />
-      </div>
-    </div>
-  </section>
+    <section class="area-projects overflow-scroll">
+      <ProjectCard
+          v-for="project in projects"
+          :name="project.name"
+          :description="project.description"
+          :link="project.link"
+      />
+    </section>
+  </main>
 </template>
 <style scoped lang="scss">
-.bio-text {
-  @apply text-[5vw];
+.title-idkncc {
+  font-weight: 900;
+  font-size: clamp(8rem, 15vw, 16rem) !important;
 }
+
+$horizontal-layout-breakpoint: 960px;
+
+.main-content {
+  @apply w-screen h-screen p-2;
+  @apply overscroll-none overflow-hidden;
+  @apply gap-1;
+
+  @media screen and (min-width: $horizontal-layout-breakpoint) {
+    display: grid;
+    grid-template-areas:
+            "a a"
+            "b c";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+  }
+
+  @media screen and (max-width: $horizontal-layout-breakpoint) {
+    @apply flex flex-col gap-1;
+  }
+
+
+  .main-section {
+    @apply w-full p-10;
+    @apply rounded-3xl border border-gray;
+  }
+
+  .area-title {
+    grid-area: a;
+  }
+
+  .area-langs {
+    grid-area: b;
+
+    @apply flex gap-2;
+
+    @media screen and (min-width: $horizontal-layout-breakpoint) {
+      @apply flex-col;
+    }
+  }
+
+  .area-projects {
+    grid-area: c;
+
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2;
+  }
+}
+
 
 .disable-select {
   @apply select-none cursor-default;

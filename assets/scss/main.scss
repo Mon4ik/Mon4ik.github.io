@@ -2,55 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "fonts";
-
 body {
-  @apply bg-concrete-100 text-black m-0;
-
-  font-family: "ArchitecturalMed", sans-serif;
-}
-
-section.page-full {
-  width: 100vw;
-  height: 100dvh;
-  overflow: hidden;
-
-  padding: 4vw;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &.sizes-2page {
-    height: 200dvh;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "ArchitecturalMedExp", sans-serif;
+  font-family: "Prompt", ui-system, sans-serif;
+  @apply text-wheat bg-black text-4xl;
 }
 
 p {
   @apply m-0;
 }
 
+h1 {
+  @apply text-8xl;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
 }
 
 .btn {
-  @apply bg-concrete-300 px-6 py-2 transition-all;
-  @apply text-4xl;
-
-  font-family: "Architectural", sans-serif;
+  @apply px-6 py-2 rounded-xl;
 
   &:hover {
-    @apply bg-opacity-50;
-    font-family: "ArchitecturalMed", sans-serif;
+    filter: brightness(1.2);
   }
 
   &:active {
-    @apply bg-concrete-400;
+    filter: brightness(0.8);
   }
 }
