@@ -1,75 +1,12 @@
-# Nuxt 3 Minimal Starter
+# idkncc
+just my website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> ![NOTE]
+> 
+> website had a lot of revisions
+>  - 1 rev [_(see img)_](docs/1rev.png)
+>  - 2 rev [_(see img)_](docs/2rev.png)
+>  - 3 rev [_(see img)_](docs/3rev.png)
+>  - 4 rev [_(current)_](https://idkncc.ru)
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+![current image of website](https://github.com/Mon4ik/Mon4ik.github.io/assets/58977309/a9813910-68e4-4166-96c7-972146e75242)
