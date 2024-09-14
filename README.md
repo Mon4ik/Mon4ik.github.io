@@ -1,5 +1,10 @@
+# MOVED OUT
+to https://github.com/idkncc/website
+
 # idkncc
 just my website
+
+
 
 > ![NOTE]
 > 
